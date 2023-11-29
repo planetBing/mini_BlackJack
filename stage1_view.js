@@ -10,7 +10,7 @@ function printStartMessage() {
 }
 
 function putCardNumInBox(arr) {
-    return arr.map((n) => (n < 10 ? `[ ${n}]` : `[${n}]`));
+    return arr.map((n) => (n < 10 ? `[ ${n}]` : `[${n}]`)).join(" ");
 }
 
 const view = {

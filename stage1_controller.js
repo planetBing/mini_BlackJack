@@ -1,12 +1,13 @@
 const readlineSync = require("readline-sync");
 const { gameData, cardData } = require("./stage1_model.js");
 
-const playerCard = cardData.getPlayerCard();
-const dealerCard = cardData.getDealerCard();
+function getLastIndex(arr) {
+    return arr[arr.length - 1];
+}
 
 function judgeWinOrLose() {
-    const playerCurrentCard = playerCard[playerCard.length - 1];
-    const dealerCurrentCard = dealerCard[dealerCard.length - 1];
+    const playerCurrentCard = getLastIndex(cardData.getPlayerCard());
+    const dealerCurrentCard = getLastIndex(cardData.getDealerCard());
     if (playerCurrentCard > dealerCurrentCard) {
         gameData.addScore(0);
         return "당신이 이겼습니다.";

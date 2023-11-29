@@ -9,15 +9,19 @@ function printStartMessage() {
     printLine("간단 카드 게임을 시작합니다.");
 }
 
+function putCardNumInBox(arr) {
+    return arr.map((n) => (n < 10 ? `[ ${n}]` : `[${n}]`));
+}
+
 const view = {
     showTurn() {
         printLine(`Game ${gameData.getTurn()}`);
     },
     showPlayerCard() {
-        printLine(`You:    ${cardData.getPlayerCard()}`);
+        printLine(`You:    ${putCardNumInBox(cardData.getPlayerCard())}`);
     },
     showDealerCard() {
-        printLine(`Dealer: ${cardData.getDealerCard()}`);
+        printLine(`Dealer: ${putCardNumInBox(cardData.getDealerCard())}`);
     },
     showJudgement() {
         printLine(judgeWinOrLose());

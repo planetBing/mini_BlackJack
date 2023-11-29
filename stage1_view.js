@@ -14,7 +14,7 @@ const view = {
         printLine(`Game ${gameData.getTurn()}`);
     },
     showPlayerCard() {
-        printLine(`You: ${cardData.getPlayerCard()}`);
+        printLine(`You:    ${cardData.getPlayerCard()}`);
     },
     showDealerCard() {
         printLine(`Dealer: ${cardData.getDealerCard()}`);
@@ -30,9 +30,8 @@ const view = {
     },
 };
 
-// printLine("You: [9]");
-//     printLine("Dealer: [10]");
-//     printLine("딜러가 이겼습니다");
-//     printLine("현재 전적: 0승 1패");
+function printClosingMessage() {
+    printLine("게임을 종료합니다. \n플레이해주셔서 감사합니다.");
+}
 
-module.exports = { view, printStartMessage };
+module.exports = { printStartMessage, view, printClosingMessage };

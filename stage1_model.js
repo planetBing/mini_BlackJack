@@ -6,6 +6,14 @@ const gameData = {
     getTurn() {
         return this.turn;
     },
+    score: [0, 0, 0],
+    //socore: [승, 패, 무]
+    addScore(index) {
+        return (this.score[index] += 1);
+    },
+    getScore() {
+        return this.score;
+    },
 };
 
 const cardData = {

@@ -22,6 +22,12 @@ const view = {
     showJudgement() {
         printLine(judgeWinOrLose());
     },
+    showScore() {
+        const winScore = gameData.getScore()[0];
+        const loseScore = gameData.getScore()[1];
+        const drawScore = gameData.getScore()[2];
+        printLine(`현재 전적: ${winScore}승 ${drawScore}무 ${loseScore}패`);
+    },
 };
 
 // printLine("You: [9]");

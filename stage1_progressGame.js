@@ -10,6 +10,7 @@ function progressGame() {
     cardData.addDealerCard();
     view.showDealerCard();
     view.showJudgement();
+    view.showScore();
 }
 
 module.exports = { progressGame };
